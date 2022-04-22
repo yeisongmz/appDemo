@@ -1,18 +1,8 @@
 import  React, {useState} from 'react';
 import { View, Text } from 'react-native';
 
-import { NavigationContainer } from '@react-navigation/native';
-
 import TabNavigationLogin from './src/navigation/TabNavigatorLogin';
 import TabNavigationHome from './src/navigation/TabNavigatorHome';
-
-
-//componentes
-
-
-
-//constantes
-
 
 
 
@@ -21,9 +11,9 @@ import TabNavigationHome from './src/navigation/TabNavigatorHome';
 function App() {
   const [logeado, setLogeado] = useState(false);
   return (
-
+    
       logeado ? <TabNavigationHome/> :  <TabNavigationLogin/>
-
+      
   );
 }
 

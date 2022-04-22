@@ -1,38 +1,28 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
-
+import LoginScreen from '../components/Login';
 import { NavigationContainer } from '@react-navigation/native';
-
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
-
-//componentes
-
-function LoginScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Login!</Text>
-    </View>
-  );
-}
+import StackNavigatorLogin from './StackNavigatorLogin';
+import { NativeBaseProvider } from 'native-base';
 
 
 //constantes
 const Tab = createBottomTabNavigator();
 
-
-
-
 //funcion principal
 function TabNavigationLogin() {
   return (
-
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Login" component={LoginScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
-
+    <NativeBaseProvider>
+      <NavigationContainer>
+        <Tab.Navigator
+          screenOptions={{
+            headerShown: false
+          }}
+        >
+          <Tab.Screen name="StackLogin" component={StackNavigatorLogin} />
+        </Tab.Navigator>
+      </NavigationContainer>
+    </NativeBaseProvider>
 
   );
 }
