@@ -1,20 +1,13 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { NativeBaseProvider } from 'native-base';
 
 import { NavigationContainer } from '@react-navigation/native';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+import StackNavigationHome from './StackNavigationHome';
 
-//componentes
-
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>HomeScreen!</Text>
-    </View>
-  );
-}
+import HomeScreen from '../components/Home'
 
 
 //constantes
@@ -26,12 +19,24 @@ const Tab = createBottomTabNavigator();
 //funcion principal
 function TabNavigationHome() {
   return (
-
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <NativeBaseProvider>
+      <NavigationContainer>
+        <Tab.Navigator
+          screenOptions={{
+            headerShown: false,
+            overlay: {
+              interceptTouchOutside: false
+            },
+            layout: {
+              backgroundColor: "transparent",
+              orientation: ["portrait"]
+            }
+          }}
+        >
+          <Tab.Screen name="Home" component={StackNavigationHome} />
+        </Tab.Navigator>
+      </NavigationContainer>
+    </NativeBaseProvider>
 
 
   );

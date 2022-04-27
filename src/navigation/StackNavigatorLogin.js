@@ -7,7 +7,18 @@ const Stack = createNativeStackNavigator();
 
 const StackNavigatorLogin = () => {
     return (
-        <Stack.Navigator>
+        <Stack.Navigator
+        screenOptions={{
+            headerShown: false,
+            overlay: {
+                interceptTouchOutside: false
+              },
+              layout: {
+                backgroundColor: "transparent",
+                orientation: ["portrait"]
+              }
+          }}
+        >
             <Stack.Screen name="Login" component={LoginScreen} />
             <Stack.Screen name="Register" component={Register} />
         </Stack.Navigator>

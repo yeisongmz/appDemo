@@ -1,5 +1,5 @@
 import * as React from 'react';
-import LoginScreen from '../components/Login';
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import StackNavigatorLogin from './StackNavigatorLogin';
@@ -16,7 +16,14 @@ function TabNavigationLogin() {
       <NavigationContainer>
         <Tab.Navigator
           screenOptions={{
-            headerShown: false
+            headerShown: false,
+            overlay: {
+              interceptTouchOutside: false
+            },
+            layout: {
+              backgroundColor: "transparent",
+              orientation: ["portrait"]
+            }
           }}
         >
           <Tab.Screen name="StackLogin" component={StackNavigatorLogin} />

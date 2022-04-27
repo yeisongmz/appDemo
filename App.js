@@ -1,19 +1,21 @@
-import  React, {useState} from 'react';
+import React, { useState } from 'react';
 import { View, Text } from 'react-native';
+import { Provider } from 'react-redux';
+import { Store } from './store';
 
-import TabNavigationLogin from './src/navigation/TabNavigatorLogin';
-import TabNavigationHome from './src/navigation/TabNavigatorHome';
+import RootNavigation from './src/navigation/rootNavigation';
+import {useSelector } from 'react-redux';
+
 
 
 
 
 //funcion principal
 function App() {
-  const [logeado, setLogeado] = useState(false);
   return (
-    
-      logeado ? <TabNavigationHome/> :  <TabNavigationLogin/>
-      
+    <Provider store={Store}>
+      <RootNavigation />
+    </Provider>
   );
 }
 
