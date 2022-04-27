@@ -1,0 +1,9 @@
+export const SET_NAME = 'SET_NAME';
+export const SET_PASS = 'SET_PASS';
+export const SET_USER_DATA = 'SET_USER_DATA';
+export const SET_TOKEN = 'SET_TOKEN';
+export const LOGEADO = 'LOGEADO';
+export const UNLOGIN = 'UNLOGIN';
+export const LOADING_UP = 'LOADING_UP';
+export const LOADING_DOWN = 'LOADING_DOWN';
+export const SET_CLIENTES = 'SET_CLIENTES';
