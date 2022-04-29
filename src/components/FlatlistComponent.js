@@ -1,6 +1,7 @@
 import React from "react";
 import { Heading, Box, FlatList, HStack, Avatar, Text, VStack, Spacer } from "native-base";
 import {Alert} from 'react-native'
+import { BluetoothComponent } from "../util/BluetoothComponent";
 
 
 const FatlistComponent = (props) => {
@@ -14,7 +15,8 @@ const FatlistComponent = (props) => {
     }];
 
     const entrar = (item) => {
-        Alert.alert(item.nombre, `${item.email}`)
+        //Alert.alert(item.nombre, `${item.email}`)
+        BluetoothComponent();
     }
     return (
         <Box>

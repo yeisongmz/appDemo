@@ -32,9 +32,12 @@ local.properties
 
 # node.js
 #
-node_modules/
+!/node_modules/
+/node_modules/*
+!/node_modules/tp-react-native-bluetooth-printer/
 npm-debug.log
 yarn-error.log
+
 
 # BUCK
 buck-out/

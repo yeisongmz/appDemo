@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import StackNavigatorLogin from './StackNavigatorLogin';
 import { NativeBaseProvider } from 'native-base';
+import Tabdos from '../components/Tabdos'
 
 
 //constantes
@@ -27,6 +28,7 @@ function TabNavigationLogin() {
           }}
         >
           <Tab.Screen name="StackLogin" component={StackNavigatorLogin} />
+          <Tab.Screen name="Bluetooth" component={Tabdos} />
         </Tab.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>
