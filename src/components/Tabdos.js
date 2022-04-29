@@ -16,7 +16,7 @@ import {
     BluetoothEscposPrinter,
     BluetoothManager,
     BluetoothTscPrinter
-} from "../../java_modules/tp-react-native-bluetooth-printer";
+} from "tp-react-native-bluetooth-printer";
 
 import { conecct, printText, printQr, printImage, printlabel, obtenerTexto, unpair, disconnect } from '../util/BluetoothComponent';
 

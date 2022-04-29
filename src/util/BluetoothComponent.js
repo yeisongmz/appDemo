@@ -3,7 +3,7 @@ import {
     BluetoothManager,
     BluetoothEscposPrinter,
     BluetoothTscPrinter,
-} from "../../tp-react-native-bluetooth-printer";
+} from "tp-react-native-bluetooth-printer";
 
 import RNFS from 'react-native-fs';
 import { base64Image, base64Jpg, base64JpgLogo } from './constantestwo';
@@ -13,8 +13,6 @@ const sprt = 'DC:0D:30:14:6B:5F'
 const golink = 'DC:0D:30:CC:F5:8E'
 
 const selectImpre = sprt
-
-
 
 export const conecct = () => {
     console.log('intentando conectar');
